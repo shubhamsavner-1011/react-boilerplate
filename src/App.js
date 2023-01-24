@@ -1,25 +1,14 @@
-import axios from 'axios';
-import { useEffect } from 'react';
+import React from 'react';
 import './App.css';
-const URL = process.env.REACT_APP_API_URL;
+import { Header } from './layout/Header';
+import Routing from './routing/Routing';
 
-
-
-
-
-function App() {
-useEffect(()=> {
-  axios.get(`${URL}users`, {
-    headers: {
-      'Content-type': 'application/json'
-    }
-  }).then((res)=> console.log(res, 'response'))
-}, [])
+export const App = () => {
   return (
     <div className="App">
-    <h2>Axios Interceptor</h2>
+      <Header />
+      <Routing />
+      {/* <Footer /> */}
     </div>
   );
-}
-
-export default App;
+};

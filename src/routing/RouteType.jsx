@@ -1,18 +1,13 @@
 import { URL } from '../base/constants/routesPath';
 
-import {
-  Home,
-  Welcome,
-  Register,
-  SignIn
-} from '../pages/index';
-
+import { Home, Register, SignIn, Blog, About } from '../pages/index';
 
 export const publicRoutes = [
   { path: URL.HOME_PAGE, Component: Home },
   { path: URL.LOGIN_PAGE, Component: SignIn },
   { path: URL.REGISTER_PAGE, Component: Register },
-  { path: URL.WELCOME_PAGE, Component: Welcome },
+  { path: URL.BLOG_PAGE, Component: Blog },
+  { path: URL.ABOUT_PAGE, Component: About },
 ];
 
 export const privateRoutes = [{ path: URL.HOME_PAGE, Component: Home }];
